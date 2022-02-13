@@ -3,10 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TransferenciasComponent } from './pages/transferencias/transferencias.component';
+import { SimuladorAhorrosComponent } from './pages/simulador-ahorros/simulador-ahorros.component';
+import { EstadoCuentaComponent } from './pages/estado-cuenta/estado-cuenta.component';
+import { AdministracionDeudasComponent } from './pages/administracion-deudas/administracion-deudas.component';
+import { AprovacionPrestamoComponent } from './pages/aprovacion-prestamo/aprovacion-prestamo.component';
+import { ConversionMonedaComponent } from './pages/conversion-moneda/conversion-moneda.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TransferenciasComponent,
+    SimuladorAhorrosComponent,
+    EstadoCuentaComponent,
+    AdministracionDeudasComponent,
+    AprovacionPrestamoComponent,
+    ConversionMonedaComponent
   ],
   imports: [
     BrowserModule,

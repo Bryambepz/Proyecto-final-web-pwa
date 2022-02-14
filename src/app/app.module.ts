@@ -9,6 +9,7 @@ import { EstadoCuentaComponent } from './pages/estado-cuenta/estado-cuenta.compo
 import { AdministracionDeudasComponent } from './pages/administracion-deudas/administracion-deudas.component';
 import { AprovacionPrestamoComponent } from './pages/aprovacion-prestamo/aprovacion-prestamo.component';
 import { ConversionMonedaComponent } from './pages/conversion-moneda/conversion-moneda.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { ConversionMonedaComponent } from './pages/conversion-moneda/conversion-
     EstadoCuentaComponent,
     AdministracionDeudasComponent,
     AprovacionPrestamoComponent,
-    ConversionMonedaComponent
+    ConversionMonedaComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

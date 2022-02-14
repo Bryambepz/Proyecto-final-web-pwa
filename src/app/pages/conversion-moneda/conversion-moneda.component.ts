@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { conversionM } from 'src/app/domain/conversionws';
+import { ConversionwsService } from 'src/app/services/conversionws.service';
 
 @Component({
   selector: 'app-conversion-moneda',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConversionMonedaComponent implements OnInit {
 
-  constructor() { }
+  conversion: conversionM = new conversionM();
+
+  res: number = 0;
+  constructor(private converisonService: ConversionwsService) { }
 
   ngOnInit(): void {
   }
 
+  guardar(){
+     this.converisonService.guardar(this.conversion).subscribe((data:any) => {
+      console.log(data);
+      this.res =data;
+    })
+  }
 }

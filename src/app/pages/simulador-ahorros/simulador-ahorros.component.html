@@ -1,1 +1,13 @@
-<p>simulador-ahorros works!</p>
+<h1>Simulador de Ahorros</h1>
+<form>
+    <label for="txtMonto">Monto: </label>
+    <input id="txtMonto" name="txtMonto" type="number" [(ngModel)] = "simuladorAhorro.monto"/>
+    <br>
+    <label for="txtTiempo">Tiempo: </label>
+    <input id="txtTiempo" name="txtTiempo" type ="number" [(ngModel)]="simuladorAhorro.tiempo"/>
+    <br>    
+    <button (click)="simular()">Simular Ahorro</button>
+    <br>
+    <label for="txtRendimiento">Rendimiento: </label>        
+    <output id="txtRendimiento" name="txtRendimiento" type ="number" >{{rendimiento}}</output>
+</form>

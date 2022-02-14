@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,7 @@ import { AprovacionPrestamoComponent } from './pages/aprovacion-prestamo/aprovac
 import { ConversionMonedaComponent } from './pages/conversion-moneda/conversion-moneda.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +21,15 @@ import { HttpClientModule } from '@angular/common/http';
     EstadoCuentaComponent,
     AdministracionDeudasComponent,
     AprovacionPrestamoComponent,
-    ConversionMonedaComponent,
+    ConversionMonedaComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

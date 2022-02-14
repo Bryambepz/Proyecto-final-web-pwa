@@ -1,1 +1,13 @@
-<p>conversion-moneda works!</p>
+<h1>Conversion Moneda</h1>
+<form>
+    <label for="txtMoneda">Moneda:</label>
+    <input id="txtMoneda" name="txtMoneda" type="text" [(ngModel)] = "conversion.moneda"/>
+    <br>
+    <label for="txtCantidad">Cantidad:</label>
+    <input id="txtCantidad" name="txtCantidad" type ="number" [(ngModel)]="conversion.cantidad"/>
+    <br>    
+    <button (click)="guardar()"> Guardar</button>
+    <br>
+    <label for="txtResltado">Resultado:</label>        
+    <output id="txtResltado" name="txtResltado" type ="number" >{{res}}</output>
+</form>

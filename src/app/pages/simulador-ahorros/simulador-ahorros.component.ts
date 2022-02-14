@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { simuladorAhorro } from 'src/app/domain/simulador';
+import { SimuladorwsService } from 'src/app/services/simuladorws.service';
 
 @Component({
   selector: 'app-simulador-ahorros',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimuladorAhorrosComponent implements OnInit {
 
-  constructor() { }
+  simuladorAhorro: simuladorAhorro = new simuladorAhorro();
+
+  rendimiento: number = 0;
+
+  constructor(private simuldor: SimuladorwsService) { }
 
   ngOnInit(): void {
+  }
+
+  simular(){
+    this.simuldor.simular(this.simuladorAhorro).subscribe((date: any) => {
+      console.log(date);
+      this.rendimiento = date;
+    })
   }
 
 }

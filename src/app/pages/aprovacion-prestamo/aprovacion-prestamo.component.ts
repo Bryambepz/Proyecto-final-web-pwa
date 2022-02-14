@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { conversionM } from 'src/app/domain/conversionws';
+import { ConversionwsService } from 'src/app/services/conversionws.service';
 
 @Component({
   selector: 'app-aprovacion-prestamo',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AprovacionPrestamoComponent implements OnInit {
 
+  
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  
 }

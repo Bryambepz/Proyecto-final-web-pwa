@@ -1,1 +1,50 @@
-<p>transferencias works!</p>
+<h1>transferencias</h1>
+
+<form style="align-items: flex-start;">
+    <h3>Cuenta Propietario</h3>
+    <label for="TxtIdc">Numero Cuenta: </label>
+    <output id="TxtIdc" name="TxtIdc" type="text" >{{personaOb.id}}</output>
+    <br>
+    <label for="txtCedula">Cedula: </label>
+    <output id="txtCedula" name="txtCedula" type="text" >{{personaOb.cedula}}</output>
+    <br>
+    <label for="txtNombre">Nombre: </label>
+    <output id="txtNombre" name="txtNombre" type="text" >{{personaOb.nombre}}</output>
+    <br>
+    <label for="txtApellido">Apellido: </label>
+    <output id="txtApellido" name="txtApellido" type="text">{{personaOb.apellido}}</output>
+    <br> 
+    <label for="txtSaldo">Saldo en Cuenta: </label>
+    <output id="txtSaldo" name="txtSaldo" type="text">{{saldo}}</output>
+    <br>    
+    <input id="txtCedRE" name="txtCedRE" type="text" [(ngModel)]="personaBc.cedula"/>
+    <br>
+    <button (click)="buscarCedula()">Buscar</button>
+    <br>
+</form>
+
+<a href="http://localhost:8080/ProyectoFinalBanco/faces/iniciarSesion.xhtml">
+    imici
+</a>
+
+<form style="align-items: flex-end;">
+    
+    <h3>Cuenta a realizar Transaccion</h3>
+    <label for="TxtIdc">Numero Cuenta: </label>
+    <output id="TxtIdc" name="TxtIdc" type="text" >{{personaBc.id}}</output>
+    <br>
+    <label for="txtCedula">Cedula: </label>
+    <output id="txtCedula" name="txtCedula" type="text" >{{personaBc.cedula}}</output>
+    <br>
+    <label for="txtNombre">Nombre: </label>
+    <output id="txtNombre" name="txtNombre" type="text" >{{personaBc.nombre}}</output>
+    <br>
+    <label for="txtApellido">Apellido: </label>
+    <output id="txtApellido" name="txtApellido" type="text">{{personaBc.apellido}}</output>
+    <br>
+    <br>   
+    <label for="txtMontoT">Monto de transferencias: </label>
+    <input id="txtMontoT" name="txtMontoT" type="number" [(ngModel)]="personaBc.monto" />
+    <br>
+    <button (click)="realizarT()">Realizar Transaccion</button>
+</form>

@@ -1,12 +1,19 @@
 <h1>Conversion Moneda</h1>
 <form>
     <label for="txtMoneda">Moneda:</label>
-    <input id="txtMoneda" name="txtMoneda" type="text" [(ngModel)] = "conversion.moneda"/>
+    
+    <select name="monadaType" id="tipoM" [(ngModel)] = "conversion.moneda">
+        <option value="">Elija tipo</option>
+        <option value="Euro" >Euro</option>
+        <option value="Yuan" >Yuan</option>
+        <option value="Bitcoin">Bitcoin</option>
+        
+    </select>
     <br>
     <label for="txtCantidad">Cantidad:</label>
     <input id="txtCantidad" name="txtCantidad" type ="number" [(ngModel)]="conversion.cantidad"/>
     <br>    
-    <button (click)="guardar()"> Guardar</button>
+    <button (click)="guardar()">Calcular</button>
     <br>
     <label for="txtResltado">Resultado:</label>        
     <output id="txtResltado" name="txtResltado" type ="number" >{{res}}</output>
